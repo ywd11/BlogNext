@@ -1,12 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Index from './pages/Index'
-import List from './pages/List'
-import Home from './pages/Home'
+// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Main from './pages/Main'
+// import Index from './pages/Index'
+// import List from './pages/List'
+// import Home from './pages/Home'
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Main ></Main>
+      {/* <Router>
         <ul>
             <li> <Link to="/">首页</Link> </li>
             <li><Link to="/list/123">列表</Link> </li>
@@ -14,7 +16,7 @@ function App() {
         <Route path="/" exact component={Index} />
         <Route path="/list/:id" component={List} />
         <Route path="/home" component={Home} />
-      </Router>
+      </Router> */}
     </div>
   );
 }
