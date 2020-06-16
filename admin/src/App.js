@@ -7,7 +7,7 @@ import Main from './pages/Main'
 function App() {
   return (
     <div className="App">
-      <Main ></Main>
+      <Main />
       {/* <Router>
         <ul>
             <li> <Link to="/">首页</Link> </li>
