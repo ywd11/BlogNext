@@ -1,4 +1,6 @@
 import React, {useState}  from 'react';
+import { Route } from "react-router-dom";
+import AddArticle from './AddArticle'
 import { Layout, Menu } from 'antd';
 import {
   MenuUnfoldOutlined,
@@ -19,7 +21,7 @@ function SiderDemo() {
   };
     return (
       <Layout>
-        <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
+        <Sider trigger={null} collapsible collapsed={collapsed}>
           <div className="logo" />
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
             <Menu.Item key="1" icon={<UserOutlined />}>
@@ -35,7 +37,7 @@ function SiderDemo() {
         </Sider>
         <Layout className="site-layout">
           <Header className="site-layout-background" style={{ padding: 0 }}>
-            {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+            {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
               className: 'trigger',
               onClick: toggle,
             })}
@@ -48,7 +50,11 @@ function SiderDemo() {
               minHeight: 280,
             }}
           >
-            Content
+             <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
+                  <div>
+                    <Route path="/index/" exact  component={AddArticle} />
+                  </div>
+             </div>
           </Content>
         </Layout>
       </Layout>
